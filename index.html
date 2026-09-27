@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark-theme">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Subhasree Panda | CSE (Data Science) Student & AI Enthusiast</title>
+  <meta name="title" content="Subhasree Panda | CSE (Data Science) Student & AI Enthusiast">
+  <meta name="description" content="Portfolio of Subhasree Panda - Computer Science Engineering student specializing in Data Science, Machine Learning, and Data Analytics at NIST University.">
+  <meta name="keywords" content="Subhasree Panda, Data Science, Machine Learning, Python, NIST University, AI, Software Engineer, Portfolio">
+  <meta name="author" content="Subhasree Panda">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Subhasree Panda | CSE (Data Science) Student & AI Enthusiast">
+  <meta property="og:description" content="Computer Science Engineering student specializing in Data Science with a strong foundation in Python, Machine Learning, and Data Analytics.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subhasree Panda | CSE (Data Science) Student & AI Enthusiast">
+  <meta name="twitter:description" content="Computer Science Engineering student specializing in Data Science with a strong foundation in Python, Machine Learning, and Data Analytics.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Inline Instant Theme Initializer -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'light') {
+          document.documentElement.classList.add('light-theme');
+          document.documentElement.classList.remove('dark-theme');
+        } else {
+          document.documentElement.classList.add('dark-theme');
+          document.documentElement.classList.remove('light-theme');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.classList.add('dark-theme');
+      }
+    })();
+  </script>
+</head>
+<body data-theme="dark" class="dark-theme">
+  <!-- Sticky Header & Navigation -->
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Subhasree Panda Homepage">
+        <span class="logo-badge">&lt;SP /&gt;</span>
+        <span class="logo-name">Subhasree<span class="dot-accent">.</span></span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta-group">
+          <a href="assets/Subhasree_Panda_Resume.pdf" download="Subhasree_Panda_Resume.pdf" class="btn btn-sm btn-outline nav-resume-btn">
+            <i class="fa-solid fa-download"></i> Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme" title="Switch Dark/Light Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open Navigation Menu" title="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section" id="hero">
+      <div class="hero-backdrop-glow"></div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-indicator"></span>
+            <span>Available for Data Science & AI Opportunities</span>
+          </div>
+
+          <h1 class="hero-greeting">Hi, I'm <span class="gradient-text">Subhasree Panda</span></h1>
+          
+          <h2 class="hero-role">
+            <span class="role-static">CSE (Data Science) Student | </span>
+            <span class="role-dynamic" id="typed-text">AI & Data Science Enthusiast</span>
+            <span class="cursor">&nbsp;</span>
+          </h2>
+
+          <p class="hero-bio">
+            Computer Science Engineering student at <strong>NIST University</strong> specializing in <strong>Data Science & AI/ML</strong>. Passionate about building robust machine learning models, uncovering statistical patterns from complex datasets, and architecting data-driven solutions to solve real-world problems.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-layer-group"></i> View My Projects
+            </a>
+            <a href="assets/Subhasree_Panda_Resume.pdf" download="Subhasree_Panda_Resume.pdf" class="btn btn-secondary" id="hero-download-resume">
+              <i class="fa-solid fa-arrow-down-to-bracket"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <i class="fa-regular fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Verified Social Links -->
+          <div class="hero-social-strip">
+            <span class="social-strip-label">Connect:</span>
+            <div class="social-links">
+              <a href="https://github.com/subhasree-panda" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/subhasree-panda" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:subhasreepanda494@email.com" class="social-link" aria-label="Send Email" title="Email Subhasree">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:+917849063497" class="social-link" aria-label="Call Subhasree" title="Phone">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Code Visual -->
+        <div class="hero-code-wrapper">
+          <div class="code-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+              </div>
+              <div class="terminal-title">
+                <i class="fa-brands fa-python"></i> subhasree_profile.py
+              </div>
+              <div class="terminal-badge">Python 3.11</div>
+            </div>
+            
+            <pre class="terminal-body"><code><span class="c-keyword">class</span> <span class="c-class">DataScienceEngineer</span>:
+    <span class="c-keyword">def</span> <span class="c-func">__init__</span>(self):
+        self.name = <span class="c-str">"Subhasree Panda"</span>
+        self.education = <span class="c-str">"B.Tech CSE - Data Science"</span>
+        self.university = <span class="c-str">"NIST University, Odisha"</span>
+        self.cgpa = <span class="c-num">9.64</span>
+        self.core_stack = [
+            <span class="c-str">"Python"</span>, <span class="c-str">"Machine Learning"</span>, 
+            <span class="c-str">"Scikit-learn"</span>, <span class="c-str">"SQL"</span>, <span class="c-str">"Pandas"</span>
+        ]
+
+    <span class="c-keyword">def</span> <span class="c-func">build_intelligent_solution</span>(self, dataset):
+        insights = self.exploratory_data_analysis(dataset)
+        model = self.train_predictive_model(insights)
+        <span class="c-keyword">return</span> model.evaluate_and_deploy()
+
+<span class="c-comment"># Recruiter Ready: High Academic & Analytical Rigor</span>
+subhasree = DataScienceEngineer()</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-tag"><i class="fa-solid fa-user"></i> Professional Profile</div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-description">A concise overview of my academic foundation, technical focus, and aspirations.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative-card">
+            <h3 class="about-card-title">Driven by Data, Fueled by Problem Solving</h3>
+            <p class="about-paragraph">
+              I am a dedicated Computer Science Engineering student specializing in Data Science at the <strong>National Institute of Science and Technology (NIST University)</strong>. My passion lies at the intersection of statistical analysis, predictive machine learning algorithms, and real-world software engineering.
+            </p>
+            <p class="about-paragraph">
+              Through academic coursework, rigorous self-driven projects, and internship exposure at Skill Development Institute (SDI), I have honed a methodical approach to data preprocessing, exploratory data analysis, and predictive model architecture. I aim to contribute to high-impact engineering teams building intelligent, data-driven systems.
+            </p>
+            
+            <div class="about-meta-row">
+              <div class="about-meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="meta-label">Location</span>
+                  <span class="meta-val">Berhampur, Odisha, India</span>
+                </div>
+              </div>
+              <div class="about-meta-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <span class="meta-label">Specialization</span>
+                  <span class="meta-val">CSE – Data Science</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Highlights -->
+          <div class="about-highlights-grid">
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="highlight-info">
+                <h4>Education</h4>
+                <p>B.Tech in CSE (Data Science), NIST University &bull; <strong>4th Sem: 9.41 CGPA</strong></p>
+              </div>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fa-solid fa-bullseye"></i></div>
+              <div class="highlight-info">
+                <h4>Focus</h4>
+                <p>Machine Learning, Exploratory Data Analysis, Predictive Modeling, Algorithms</p>
+              </div>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-info">
+                <h4>Interests</h4>
+                <p>Data-Driven Decision Making, Statistical Modeling, Full-Stack Data Applications</p>
+              </div>
+              <div class="highlight-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="highlight-info">
+                <h4>Current Learning</h4>
+                <p>Advanced Deep Learning Architectures, Docker Containerization, Production ML</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-tag"><i class="fa-solid fa-code"></i> Technical Stack</div>
+          <h2 class="section-title">Skills & Competencies</h2>
+          <p class="section-description">Core technical proficiencies across programming, data science, databases, and development tooling.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-title-bar">
+              <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-badges-container">
+              <div class="skill-badge"><i class="fa-brands fa-python"></i> Python</div>
+              <div class="skill-badge"><i class="fa-solid fa-terminal"></i> C</div>
+              <div class="skill-badge"><i class="fa-solid fa-terminal"></i> C++</div>
+              <div class="skill-badge"><i class="fa-brands fa-java"></i> Java</div>
+            </div>
+          </div>
+
+          <!-- Data Science & AI -->
+          <div class="skill-category-card">
+            <div class="category-title-bar">
+              <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3>Data Science & AI</h3>
+            </div>
+            <div class="skill-badges-container">
+              <div class="skill-badge"><i class="fa-solid fa-robot"></i> Machine Learning</div>
+              <div class="skill-badge"><i class="fa-solid fa-chart-simple"></i> Data Analytics</div>
+              <div class="skill-badge"><i class="fa-solid fa-chart-line"></i> Linear Regression</div>
+              <div class="skill-badge"><i class="fa-solid fa-microchip"></i> Scikit-learn</div>
+              <div class="skill-badge"><i class="fa-solid fa-table"></i> Pandas</div>
+              <div class="skill-badge"><i class="fa-solid fa-calculator"></i> NumPy</div>
+              <div class="skill-badge"><i class="fa-solid fa-chart-pie"></i> Matplotlib</div>
+              <div class="skill-badge"><i class="fa-solid fa-sitemap"></i> Data Structures</div>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skill-category-card">
+            <div class="category-title-bar">
+              <div class="category-icon"><i class="fa-solid fa-globe"></i></div>
+              <h3>Web Development</h3>
+            </div>
+            <div class="skill-badges-container">
+              <div class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5</div>
+              <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+              <div class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-category-card">
+            <div class="category-title-bar">
+              <div class="category-icon"><i class="fa-solid fa-database"></i></div>
+              <h3>Databases</h3>
+            </div>
+            <div class="skill-badges-container">
+              <div class="skill-badge"><i class="fa-solid fa-database"></i> SQL</div>
+              <div class="skill-badge"><i class="fa-solid fa-server"></i> MySQL</div>
+            </div>
+          </div>
+
+          <!-- Tools & Environments -->
+          <div class="skill-category-card full-width-card">
+            <div class="category-title-bar">
+              <div class="category-icon"><i class="fa-solid fa-wrench"></i></div>
+              <h3>Tools & Environment</h3>
+            </div>
+            <div class="skill-badges-container">
+              <div class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git</div>
+              <div class="skill-badge"><i class="fa-brands fa-github"></i> GitHub</div>
+              <div class="skill-badge"><i class="fa-solid fa-laptop-code"></i> VS Code</div>
+              <div class="skill-badge"><i class="fa-solid fa-book-open"></i> Jupyter Notebook</div>
+              <div class="skill-badge"><i class="fa-solid fa-c"></i> Dev-C++</div>
+              <div class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</div>
+              <div class="skill-badge"><i class="fa-brands fa-linux"></i> Linux / Ubuntu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Most Important) -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-tag"><i class="fa-solid fa-folder-open"></i> Featured Portfolio</div>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-description">Practical engineering implementations demonstrating machine learning, statistical modeling, and data visualization.</p>
+        </div>
+
+        <div class="projects-wrapper">
+          <!-- Featured Project Card: Student Marks Predictor -->
+          <div class="project-featured-card">
+            <div class="project-card-header">
+              <div class="project-badge-group">
+                <span class="badge badge-primary"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+                <span class="badge badge-subtle">Academic Project</span>
+              </div>
+              <h3 class="project-title">Student Marks Predictor</h3>
+              <p class="project-tagline">
+                An intelligent regression-based system designed to forecast academic outcomes and identify performance trends using historical student behavioral data.
+              </p>
+            </div>
+
+            <div class="project-card-content">
+              <div class="project-spec-item">
+                <span class="spec-label"><i class="fa-solid fa-triangle-exclamation"></i> Problem Solved:</span>
+                <p class="spec-text">Traditional academic evaluations identify struggling students only after exam cycles. This model analyzes study patterns, attendance, and coursework history to deliver predictive performance indicators early.</p>
+              </div>
+
+              <div class="project-spec-item">
+                <span class="spec-label"><i class="fa-solid fa-list-check"></i> Key Features:</span>
+                <ul class="project-feature-list">
+                  <li><i class="fa-solid fa-check"></i> Multi-variable Linear Regression modeling trained with Scikit-learn.</li>
+                  <li><i class="fa-solid fa-check"></i> Statistical data preprocessing, feature normalization, and cleaning.</li>
+                  <li><i class="fa-solid fa-check"></i> Correlation matrices and trend visualization generated with Matplotlib.</li>
+                </ul>
+              </div>
+
+              <div class="project-tech-pills">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Scikit-learn</span>
+                <span class="tech-pill">Linear Regression</span>
+                <span class="tech-pill">Pandas</span>
+                <span class="tech-pill">NumPy</span>
+                <span class="tech-pill">Matplotlib</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="btn btn-primary" onclick="openProjectModal('marks-predictor')">
+                <i class="fa-solid fa-circle-info"></i> View Project Details
+              </button>
+              <a href="https://github.com/subhasree-panda" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-badge"><i class="fa-solid fa-brain"></i> Machine Learning Project</span>
+            <h3 class="modal-title" id="modal-title">Student Marks Predictor</h3>
+          </div>
+          <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close Project Modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4 class="modal-section-title"><i class="fa-solid fa-eye"></i> Overview</h4>
+            <p>
+              The Student Marks Predictor is a machine learning application designed to predict and analyze academic performance. By leveraging regression techniques over historical academic metrics, the system models the mathematical relationship between study habits and examination results.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h4 class="modal-section-title"><i class="fa-solid fa-circle-question"></i> Problem</h4>
+            <p>
+              Academic institutions frequently lack proactive analytical mechanisms to identify students in need of academic intervention before final evaluations. Without quantitative data insights, personalized mentoring cannot be targeted effectively.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h4 class="modal-section-title"><i class="fa-solid fa-lightbulb"></i> Solution</h4>
+            <p>
+              Implemented a supervised machine learning pipeline in Python utilizing Scikit-learn's Linear Regression algorithm. The pipeline ingests multi-dimensional student data, performs outlier removal and scaling, and produces an accurate score forecast with visual analytical graphs.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h4 class="modal-section-title"><i class="fa-solid fa-layer-group"></i> Tech Stack</h4>
+            <div class="modal-tech-grid">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Scikit-learn</span>
+              <span class="tech-pill">Linear Regression</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">Matplotlib</span>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h4 class="modal-section-title"><i class="fa-solid fa-star"></i> Key Features</h4>
+            <ul class="modal-feature-list">
+              <li><strong>Predictive Accuracy:</strong> Robust linear mapping between continuous study attributes and score outcomes.</li>
+              <li><strong>Exploratory Data Analysis:</strong> Statistical summaries uncovering positive correlations between dedicated hours and performance metrics.</li>
+              <li><strong>Visual Dashboard:</strong> Automated generation of Matplotlib scatter plots and regression fit lines.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://github.com/subhasree-panda" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+          <button class="btn btn-ghost" onclick="closeProjectModal()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience & Internships Section -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-tag"><i class="fa-solid fa-briefcase"></i> Experience</div>
+          <h2 class="section-title">Internships & Professional Growth</h2>
+          <p class="section-description">Practical industry and academic internships focused on data analysis, programming, and software concepts.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1: SDI -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-tag">Industry Internship</span>
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Jun 2026 – Jul 2026</span>
+            </div>
+            
+            <div class="timeline-body">
+              <h3 class="timeline-role">Data Analytics Intern</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-building"></i> Skill Development Institute (SDI), Bhubaneswar, Odisha</h4>
+              
+              <ul class="timeline-points">
+                <li>Worked with Python for structured data preprocessing, dataset cleaning, analysis, and visualization.</li>
+                <li>Applied exploratory data analytics techniques to identify underlying statistical patterns and extract insights.</li>
+                <li>Utilized core Python libraries (Pandas, NumPy, Matplotlib) to support data-driven decision-making processes.</li>
+              </ul>
+
+              <div class="timeline-tech-strip">
+                <span class="tag-sm">Python</span>
+                <span class="tag-sm">Data Preprocessing</span>
+                <span class="tag-sm">Data Analytics</span>
+                <span class="tag-sm">Matplotlib</span>
+                <span class="tag-sm">Pandas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: NIST -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-tag">Academic Internship</span>
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2024</span>
+            </div>
+            
+            <div class="timeline-body">
+              <h3 class="timeline-role">Academic Intern</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-university"></i> National Institute of Science and Technology (NIST), Berhampur</h4>
+              
+              <ul class="timeline-points">
+                <li>Strengthened fundamental computer science and algorithmic principles through practical programming assignments.</li>
+                <li>Developed, optimized, and tested modular programs utilizing C, C++, and Python.</li>
+                <li>Gained hands-on exposure to standard software development workflows and debugging methodologies.</li>
+              </ul>
+
+              <div class="timeline-tech-strip">
+                <span class="tag-sm">C</span>
+                <span class="tag-sm">C++</span>
+                <span class="tag-sm">Python</span>
+                <span class="tag-sm">Algorithms</span>
+                <span class="tag-sm">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Journey</div>
+          <h2 class="section-title">Education</h2>
+          <p class="section-description">A proven track record of consistent academic excellence throughout school and university.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- College -->
+          <div class="edu-card edu-highlight">
+            <div class="edu-badge-row">
+              <span class="edu-year-badge">2024 – 2028</span>
+              <span class="edu-status-badge">Undergraduate</span>
+            </div>
+            
+            <h3 class="edu-degree">B.Tech in Computer Science Engineering (Data Science)</h3>
+            <h4 class="edu-institution"><i class="fa-solid fa-building-columns"></i> National Institute of Science and Technology (NIST University)</h4>
+            <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Berhampur, Odisha</p>
+            
+            <div class="edu-score-container">
+              <div class="score-card"><span class="sem-label">1st Sem:</span> <strong>9.18 CGPA</strong></div>
+              <div class="score-card"><span class="sem-label">2nd Sem:</span> <strong>9.59 CGPA</strong></div>
+              <div class="score-card"><span class="sem-label">3rd Sem:</span> <strong>9.64 CGPA</strong></div>
+              <div class="score-card highlight-score"><span class="sem-label">4th Sem:</span> <strong>9.41 CGPA</strong></div>
+            </div>
+          </div>
+
+          <!-- Higher Secondary -->
+          <div class="edu-card">
+            <div class="edu-badge-row">
+              <span class="edu-year-badge">2022 – 2024</span>
+              <span class="edu-status-badge">Class XII</span>
+            </div>
+            
+            <h3 class="edu-degree">Higher Secondary Education</h3>
+            <h4 class="edu-institution"><i class="fa-solid fa-school"></i> SSVM Nilkantha Nagar</h4>
+            <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Berhampur, Odisha</p>
+            
+            <div class="edu-score-container">
+              <div class="score-card highlight-score"><span class="sem-label">Percentage:</span> <strong>84.33%</strong></div>
+            </div>
+          </div>
+
+          <!-- Secondary -->
+          <div class="edu-card">
+            <div class="edu-badge-row">
+              <span class="edu-year-badge">2021 – 2022</span>
+              <span class="edu-status-badge">Class X</span>
+            </div>
+            
+            <h3 class="edu-degree">Secondary School Education</h3>
+            <h4 class="edu-institution"><i class="fa-solid fa-school"></i> SSVM Ramahari Nagar</h4>
+            <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Berhampur, Odisha</p>
+            
+            <div class="edu-score-container">
+              <div class="score-card highlight-score"><span class="sem-label">Percentage:</span> <strong>95.66%</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section class="achievements section" id="achievements">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-tag"><i class="fa-solid fa-award"></i> Verified Credentials</div>
+          <h2 class="section-title">Certifications & Workshops</h2>
+          <p class="section-description">Recognized industry certifications, technical workshops, and skill-building programs.</p>
+        </div>
+
+        <div class="achieve-grid">
+          <!-- Cert 1 -->
+          <div class="achieve-card">
+            <div class="achieve-icon-box"><i class="fa-solid fa-certificate"></i></div>
+            <div class="achieve-content">
+              <h3>Introduction to Data Science</h3>
+              <p class="achieve-issuer"><i class="fa-solid fa-building"></i> Infosys Springboard</p>
+              <span class="achieve-badge">Data Science</span>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="achieve-card">
+            <div class="achieve-icon-box"><i class="fa-solid fa-robot"></i></div>
+            <div class="achieve-content">
+              <h3>AI for Business Professionals</h3>
+              <p class="achieve-issuer"><i class="fa-solid fa-building"></i> HP Foundation (HP LIFE)</p>
+              <span class="achieve-badge">Artificial Intelligence</span>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="achieve-card">
+            <div class="achieve-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="achieve-content">
+              <h3>Cyber Job Simulation</h3>
+              <p class="achieve-issuer"><i class="fa-solid fa-building"></i> Deloitte</p>
+              <span class="achieve-badge">Cybersecurity Simulation</span>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="achieve-card">
+            <div class="achieve-icon-box"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="achieve-content">
+              <h3>Presentation & Interview Skills</h3>
+              <p class="achieve-issuer"><i class="fa-solid fa-building"></i> TCS iON</p>
+              <span class="achieve-badge">Professional Skills</span>
+            </div>
+          </div>
+
+          <!-- Cert 5 -->
+          <div class="achieve-card">
+            <div class="achieve-icon-box"><i class="fa-solid fa-code"></i></div>
+            <div class="achieve-content">
+              <h3>C & C++ Programming Certificates</h3>
+              <p class="achieve-issuer"><i class="fa-solid fa-building"></i> Cisco Networking Academy</p>
+              <span class="achieve-badge">Programming</span>
+            </div>
+          </div>
+
+          <!-- Cert 6 -->
+          <div class="achieve-card">
+            <div class="achieve-icon-box"><i class="fa-solid fa-cubes"></i></div>
+            <div class="achieve-content">
+              <h3>C++ Training, Blender, AR & Docker</h3>
+              <p class="achieve-issuer"><i class="fa-solid fa-building"></i> NIST Workshops & Training</p>
+              <span class="achieve-badge">Hands-on Workshops</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume CTA Section -->
+    <section class="resume-cta-section section" id="resume-cta">
+      <div class="container">
+        <div class="resume-cta-card">
+          <div class="resume-cta-content">
+            <span class="resume-tag"><i class="fa-solid fa-file-pdf"></i> Verified Resume PDF</span>
+            <h2 class="resume-cta-title">Want to know more about my journey?</h2>
+            <p class="resume-cta-description">
+              Review my verified qualifications, course milestones, project implementations, and professional skill sets in detail.
+            </p>
+            <div class="resume-button-group">
+              <a href="assets/Subhasree_Panda_Resume.pdf" download="Subhasree_Panda_Resume.pdf" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-download"></i> Download Resume
+              </a>
+              <a href="assets/Subhasree_Panda_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Resume (New Tab)
+              </a>
+            </div>
+          </div>
+
+          <div class="resume-card-preview">
+            <div class="doc-badge"><i class="fa-solid fa-circle-check"></i> 2-Page Official PDF</div>
+            <div class="doc-rows">
+              <div class="doc-row"><span>Candidate:</span> <strong>Subhasree Panda</strong></div>
+              <div class="doc-row"><span>Specialization:</span> <strong>CSE (Data Science)</strong></div>
+              <div class="doc-row"><span>Institution:</span> <strong>NIST University</strong></div>
+              <div class="doc-row"><span>Format:</span> <strong>PDF Document</strong></div>
+            </div>
+            <a href="assets/Subhasree_Panda_Resume.pdf" target="_blank" rel="noopener noreferrer" class="doc-view-link">
+              <i class="fa-solid fa-eye"></i> Quick Document Preview
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-tag"><i class="fa-regular fa-paper-plane"></i> Get in Touch</div>
+          <h2 class="section-title">Let's Build Something Together</h2>
+          <p class="section-description">I am actively open to internship opportunities, data science collaborations, and engineering discussions.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Column -->
+          <div class="contact-info-card">
+            <h3 class="contact-card-title">Contact Channels</h3>
+            <p class="contact-card-sub">Feel free to reach out directly through email, phone, or LinkedIn.</p>
+
+            <div class="contact-methods">
+              <a href="mailto:subhasreepanda494@email.com" class="method-item">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <span class="method-value">subhasreepanda494@email.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+917849063497" class="method-item">
+                <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Phone</span>
+                  <span class="method-value">+91 7849063497</span>
+                </div>
+              </a>
+
+              <div class="method-item">
+                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Berhampur, Odisha, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-bar">
+              <a href="https://linkedin.com/in/subhasree-panda" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://github.com/subhasree-panda" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form" onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Smith" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message</label>
+                <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="Hello Subhasree, I came across your portfolio and wanted to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-badge">&lt;SP /&gt;</span>
+        <span class="brand-text">Subhasree Panda</span>
+      </div>
+      
+      <p class="footer-copy">
+        Computer Science Engineering (Data Science) Student &bull; Built with precision.
+      </p>
+
+      <div class="footer-links">
+        <a href="assets/Subhasree_Panda_Resume.pdf" download="Subhasree_Panda_Resume.pdf"><i class="fa-solid fa-download"></i> Resume</a>
+        <a href="#hero">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
