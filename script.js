@@ -76,14 +76,106 @@ window.toggleTheme = function () {
   }
 })();
 
-// 3. Modal Management
+// 3. Modal Management & Project Data
+var projectDetailsData = {
+  'esg-copilot': {
+    badge: '<i class="fa-solid fa-leaf"></i> Data Analytics & Python Project',
+    title: 'ESG Carbon Compliance Copilot',
+    overview: 'A data-driven application engineered to track, analyze, and visualize corporate ESG carbon-emission metrics with GHG Protocol compliance reporting and audit logging.',
+    problem: 'Organizations struggle to aggregate fragmented utility and operational emissions data, verify compliance against greenhouse gas emission factors, and maintain audit-ready documentation without costly manual overhead.',
+    solution: 'Built an end-to-end analytics platform powered by Python and FastAPI that automatically classifies uploaded activity data into GHG scopes (Scope 1, Scope 2, Scope 3), calculates deterministic CO₂e values against verified emission factors, detects greenwashing risks, and logs an immutable audit trail.',
+    tech: ['Python', 'FastAPI', 'Data Analytics', 'Pandas', 'ESG Metrics', 'Data Visualization', 'Render'],
+    features: [
+      '<strong>Emissions Tracking:</strong> Automated Scope 1, Scope 2, and Scope 3 classification using UK Government GHG conversion factors.',
+      '<strong>Data Processing:</strong> Ingestion and structured preprocessing of utility CSVs and sustainability documents.',
+      '<strong>Audit-Ready Analytics:</strong> Real-time compliance calculation with transparent conversion factors and verification trails.'
+    ],
+    github: 'https://github.com/subhasree-panda',
+    live: 'https://esg-carbon-copilot.onrender.com'
+  },
+  'cityvision': {
+    badge: '<i class="fa-solid fa-car"></i> Machine Learning & Computer Vision',
+    title: 'CityVision AI — Smart Traffic Intelligence & ANPR',
+    overview: 'A high-accuracy traffic intelligence application dedicated to Automatic Number Plate Recognition (ANPR), vehicle identification, and intelligent urban mobility monitoring.',
+    problem: 'Urban traffic checkpoints and parking infrastructure require rapid, automated vehicle tracking and license identification without relying on slow manual logging.',
+    solution: 'Designed and deployed a computer vision & machine learning pipeline that accurately isolates vehicle number plates from video/image streams, processes license characters, and generates detailed vehicle movement analytics.',
+    tech: ['Python', 'Machine Learning', 'ANPR', 'Computer Vision', 'Data Processing', 'Render'],
+    features: [
+      '<strong>Automatic Number Plate Recognition:</strong> High-precision vehicle detection and license plate text extraction.',
+      '<strong>Interactive Web Dashboard:</strong> Real-time visualization for traffic officials with search and log capabilities.',
+      '<strong>Cloud Deployment:</strong> Deployed as a web application on Render with open-source code on GitHub.'
+    ],
+    github: 'https://github.com/subhasree-panda',
+    live: ''
+  },
+  'portfolio': {
+    badge: '<i class="fa-solid fa-globe"></i> Front-End & Responsive Web',
+    title: 'Personal Portfolio Website',
+    overview: 'A responsive, high-performance portfolio website engineered to showcase verified academic milestones, engineering projects, internship experience, and technical competencies.',
+    problem: 'Developers need an engaging, accessible, and fast web presence to showcase interactive demonstrations, verified academic credentials, and downloadable resumes to recruiters.',
+    solution: 'Architected a modular front-end using semantic HTML5, modern CSS3 variables for dark/light themes, and vanilla JavaScript for smooth scrolling, interactive project modals, and real-time mobile drawer navigation.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Git'],
+    features: [
+      '<strong>Instant Theme Switching:</strong> Seamless dark/light mode toggle with localStorage persistence.',
+      '<strong>Interactive Project Modals:</strong> In-depth project modals providing comprehensive architectural breakdowns.',
+      '<strong>Mobile Responsive:</strong> Fluid layout adapted across all viewport sizes with verified document downloads.'
+    ],
+    github: 'https://github.com/subhasree-panda',
+    live: '#hero'
+  }
+};
+
 window.openProjectModal = function (projectId) {
   var modal = document.getElementById('project-modal');
-  if (modal) {
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+  if (!modal) return;
+
+  var data = projectDetailsData[projectId] || projectDetailsData['esg-copilot'];
+  if (data) {
+    var badgeEl = modal.querySelector('.modal-badge');
+    var titleEl = modal.querySelector('.modal-title');
+    var overviewEl = document.getElementById('modal-overview-text');
+    var problemEl = document.getElementById('modal-problem-text');
+    var solutionEl = document.getElementById('modal-solution-text');
+    var techGridEl = document.getElementById('modal-tech-grid');
+    var featureListEl = document.getElementById('modal-feature-list');
+    var githubBtn = document.getElementById('modal-github-link');
+    var liveBtn = document.getElementById('modal-live-link');
+
+    if (badgeEl) badgeEl.innerHTML = data.badge;
+    if (titleEl) titleEl.textContent = data.title;
+    if (overviewEl) overviewEl.textContent = data.overview;
+    if (problemEl) problemEl.textContent = data.problem;
+    if (solutionEl) solutionEl.textContent = data.solution;
+
+    if (techGridEl) {
+      techGridEl.innerHTML = data.tech.map(function (t) {
+        return '<span class="tech-pill">' + t + '</span>';
+      }).join('');
+    }
+
+    if (featureListEl) {
+      featureListEl.innerHTML = data.features.map(function (f) {
+        return '<li>' + f + '</li>';
+      }).join('');
+    }
+
+    if (githubBtn) {
+      githubBtn.href = data.github;
+    }
+
+    if (liveBtn) {
+      if (data.live) {
+        liveBtn.href = data.live;
+        liveBtn.style.display = 'inline-flex';
+      } else {
+        liveBtn.style.display = 'none';
+      }
+    }
   }
+
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
 };
 
 window.closeProjectModal = function () {

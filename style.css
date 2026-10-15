@@ -818,6 +818,9 @@ ul {
 .projects-wrapper {
   max-width: 860px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
 }
 
 .project-featured-card {
